@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - CakeLicious</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Staff dashboard for CakeLicious bakery operations">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="brand-header">
+                <div class="brand-icon">👨‍🍳</div>
+                <h1>CakeLicious Staff</h1>
+            </div>
+            
+            <div class="user-info">
+                <div class="welcome-message">
+                    <div class="greeting">Staff Portal</div>
+                    <div class="user-name">Operations Dashboard</div>
+                </div>
+                <button onclick="logout()" class="logout-btn">
+                    <span>Sign Out</span>
+                    <span>👋</span>
+                </button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="section-header">
+                <h2 class="section-title">Staff Dashboard</h2>
+                <p class="section-subtitle">
+                    Manage your daily tasks, orders, and bakery operations efficiently
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">My Tasks</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">View and update your assigned tasks</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">View Tasks</button>
+                </div>
+                
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎂</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Active Orders</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Track orders in progress</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">View Orders</button>
+                </div>
+                
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📦</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Inventory</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Check ingredient stock levels</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">Check Inventory</button>
+                </div>
+                
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚚</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Deliveries</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Manage delivery schedules</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">View Deliveries</button>
+                </div>
+                
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Customer Support</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Handle customer inquiries</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">Support Center</button>
+                </div>
+                
+                <div class="product-card" style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Reports</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Generate daily operation reports</p>
+                    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 1.5rem;">View Reports</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>

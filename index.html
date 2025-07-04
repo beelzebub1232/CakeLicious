@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CakeLicious - Premium Artisan Cakes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="CakeLicious - Premium artisan cakes for every celebration. Order custom birthday cakes, wedding cakes, and more.">
+    <meta name="keywords" content="cakes, bakery, custom cakes, birthday cakes, wedding cakes, artisan">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="brand-logo">
+            <h1>🎂 CakeLicious</h1>
+            <p class="brand-tagline">Premium Artisan Cakes for Every Celebration</p>
+        </div>
+        
+        <h2 class="welcome-text">Welcome Back</h2>
+        
+        <form id="login-form" class="login-form">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="input-field" value="customer@example.com" required 
+                       placeholder="Enter your email address" autocomplete="email">
+                <span class="input-icon">📧</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="input-field" value="cust123" required 
+                       placeholder="Enter your password" autocomplete="current-password">
+                <span class="input-icon">🔒</span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+                <span>Sign In</span>
+                <span>✨</span>
+            </button>
+            
+            <div id="error-message" class="error-message" style="display: none;"></div>
+        </form>
+        
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); text-align: center;">
+            <p style="color: var(--text-medium); font-size: var(--font-size-sm); margin-bottom: 1rem;">Demo Accounts:</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+                <button type="button" class="btn btn-secondary" onclick="fillCredentials('customer@example.com', 'cust123')" style="font-size: 0.75rem; padding: 0.5rem;">Customer</button>
+                <button type="button" class="btn btn-secondary" onclick="fillCredentials('admin@example.com', 'admin123')" style="font-size: 0.75rem; padding: 0.5rem;">Admin</button>
+                <button type="button" class="btn btn-secondary" onclick="fillCredentials('staff@example.com', 'staff123')" style="font-size: 0.75rem; padding: 0.5rem;">Staff</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script>
+        function fillCredentials(email, password) {
+            document.getElementById('email').value = email;
+            document.getElementById('password').value = password;
+            
+            // Add visual feedback
+            const emailField = document.getElementById('email');
+            const passwordField = document.getElementById('password');
+            
+            emailField.style.transform = 'scale(1.02)';
+            passwordField.style.transform = 'scale(1.02)';
+            
+            setTimeout(() => {
+                emailField.style.transform = 'scale(1)';
+                passwordField.style.transform = 'scale(1)';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
